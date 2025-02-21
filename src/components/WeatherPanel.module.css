@@ -1,9 +1,82 @@
+.clearSkyDay {
+    background-image: linear-gradient(120deg, #87CEEB, #FFF8E7);
+    animation: gradient-animation 10s ease infinite;
+}
+
+.clearSkyNight {
+    background-image: linear-gradient(120deg, #191970, #4B0082);
+    animation: gradient-animation 10s ease infinite;
+}
+
+.stormDay {
+    background-image: linear-gradient(120deg, #191970, #4B0082);
+    animation: gradient-animation 10s ease infinite;
+}
+
+.stormNight {
+    background-image: linear-gradient(120deg, #191970, #8B0000);
+    animation: gradient-animation 10s ease infinite;
+}
+
+.rainDay {
+    background-image: linear-gradient(120deg, #A9A9A9, #32CD32);
+    animation: gradient-animation 10s ease infinite;
+}
+
+.rainNight {
+    background-image: linear-gradient(120deg, #2F4F4F, #228B22);
+    animation: gradient-animation 10s ease infinite;
+}
+
+.cloudsNight {
+    background-image: linear-gradient(120deg, #2F4F4F, #4B0082);
+    animation: gradient-animation 10s ease infinite;
+}
+
+.cloudsDay {
+    background-image: linear-gradient(120deg, #7a8183, #d3d3d3);
+    animation: gradient-animation 10s ease infinite;
+    color: #2F4F4F;
+}
+.cloudsNight .Stats, .cloudsNight .NextDays p{
+    color: #2F4F4F;
+}
+
+.snowNight {
+    background-image: linear-gradient(120deg, #b6b5b5, #cbe0e0);
+    animation: gradient-animation 10s ease infinite;
+    color: #000000;
+}
+
+.snowDay {
+    background-image: linear-gradient(120deg, #FFFFFF, #e5eff8);
+    animation: gradient-animation 10s ease infinite;
+    color: #2F4F4F;
+}
+
+.fogDay {
+    background-image: linear-gradient(120deg, #D3D3D3, #90EE90);
+    animation: gradient-animation 10s ease infinite;
+    color: #2F4F4F;
+}
+
+.fogNight {
+    background-image: linear-gradient(120deg, #2F4F4F, #176417);
+    animation: gradient-animation 10s ease infinite;
+    color: #000000;
+}
+
 .WeatherPanel{
-    background-color: rgba(255, 255, 255, 0.88);
     border-radius: 16px;
     border: 1px solid rgba(62, 108, 112, 0.86);
-    color: rgba(62, 108, 112, 0.86);
 }
+@keyframes gradient-animation {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
 .Header{
     display: flex;
     align-items: center;

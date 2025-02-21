@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import SettingsIcon from "../assets/SettingsIcon.jsx";
 import ListIcon from "../assets/ListIcon.jsx";
 import { getWeatherIcon } from "../assets/WeatherStatusIcon.jsx";
+import { getWeatherClassName} from "../assets/getWeatherClassName.jsx";
 
 export default function WeatherPanel() {
     const [weather, setWeather] = useState(null);
@@ -34,11 +35,11 @@ export default function WeatherPanel() {
     }, []);
 
     const todayIcon = weather ? getWeatherIcon(weather.forecast[0].icon) : "";
-
+    const todayClassName = weather ? getWeatherClassName(weather.forecast[0].icon) : "";
     return (
         <>
             {error && <div>{error}</div>}
-            <div className={styles.WeatherPanel}>
+            <div className={styles.WeatherPanel + " " + styles[todayClassName]}>
                 {weather ? (
                     <div>
                         <div className={styles.Header}>
