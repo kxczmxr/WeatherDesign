@@ -1,17 +1,11 @@
 const ListIcon = () => {
     return (
-        <svg width="70px" height="70px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
-             stroke="#3e6c70" transform="rotate(0)" strokeWidth="0.9600000000000002">
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC"
-               strokeWidth="0.24000000000000005"></g>
-            <g id="SVGRepo_iconCarrier">
-                <path
-                    d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-6 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-                    fill="#ffffff"></path>
-            </g>
+        <svg height={'11px'} width={'46px'} id="eNlGI7CrcAE1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+             viewBox="0 0 46 13" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
+            <ellipse rx="6.45" ry="6.45" transform="translate(6.45 6.5)" fill="#fff"/>
+            <ellipse rx="6.45" ry="6.45" transform="translate(23 6.5)" fill="#fff"/>
+            <ellipse rx="6.45" ry="6.45" transform="translate(39.55 6.45)" fill="#fff"/>
         </svg>
-
     )
 }
 export default ListIcon;

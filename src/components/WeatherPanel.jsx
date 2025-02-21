@@ -43,17 +43,18 @@ export default function WeatherPanel() {
                 {weather ? (
                     <div>
                         <div className={styles.Header}>
-                            <ListIcon/>
                             <h1>{weather.city || "N/A"}</h1>
-                            <SettingsIcon/>
+                            <ListIcon/>
                         </div>
+                        <div className={styles.MainInfo}>
+                            <div className={styles.Info}>
+                                <h3>{Math.round(weather.forecast[0]?.temp) ?? "N/A"}°C</h3>
+                                <p>{weather.forecast[0]?.description || "No data"}</p>
+                            </div>
                         <div className={styles.Image}>
                             <div id={'today-icon'} dangerouslySetInnerHTML={{__html: todayIcon}}/>
                         </div>
-                        <div className={styles.Info}>
-                            <h3>{Math.round(weather.forecast[0]?.temp) ?? "N/A"}°C</h3>
-                            <p>{weather.forecast[0]?.description || "No data"}</p>
-                        </div>
+                       </div>
                         <div className={styles.Stats}>
                             <div>
                                 <WindIcon/>
