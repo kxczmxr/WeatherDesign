@@ -3,7 +3,6 @@ import VisibilityIcon from "../assets/VisibilityIcon.jsx";
 import HumidityIcon from "../assets/HumidityIcon.jsx";
 import WindIcon from "../assets/WindIcon.jsx";
 import {useEffect, useState} from "react";
-import SettingsIcon from "../assets/SettingsIcon.jsx";
 import ListIcon from "../assets/ListIcon.jsx";
 import { getWeatherIcon } from "../assets/WeatherStatusIcon.jsx";
 import { getWeatherClassName} from "../assets/getWeatherClassName.jsx";
@@ -77,9 +76,10 @@ export default function WeatherPanel() {
                                     <div
                                         className={'NextDaysIcon'}
                                         id={`day-${index}`}
-                                        dangerouslySetInnerHTML={{ __html: getWeatherIcon(day.icon) }}
+                                        dangerouslySetInnerHTML={{ __html: getWeatherIcon(day.icon) }
+                                    }
                                     />
-                                    <p>{Math.round(day.temp)?? "N/A"}°C</p>
+                                    <p className={styles.MiniTemp}>{Math.round(day.temp)?? "N/A"}°C</p>
                                 </div>
                             ))}
                         </div>
