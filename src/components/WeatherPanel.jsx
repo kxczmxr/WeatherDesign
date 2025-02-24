@@ -1,11 +1,10 @@
 import styles from './WeatherPanel.module.css';
-import VisibilityIcon from "../assets/VisibilityIcon.jsx";
-import HumidityIcon from "../assets/HumidityIcon.jsx";
-import WindIcon from "../assets/WindIcon.jsx";
 import {useEffect, useState} from "react";
-import ListIcon from "../assets/ListIcon.jsx";
-import { getWeatherIcon } from "../assets/WeatherStatusIcon.jsx";
 import { getWeatherClassName} from "../assets/getWeatherClassName.jsx";
+import NextDays from "./NextDays.jsx";
+import TodayStats from "./TodayStats.jsx";
+import Header from "./Header.jsx";
+import MainInfo from "./MainInfo.jsx";
 
 export default function WeatherPanel() {
     const [weather, setWeather] = useState(null);
@@ -22,6 +21,7 @@ export default function WeatherPanel() {
                         setWeather(data);
                         console.log(data);
                     } catch (error) {
+                        console.error(error);
                         setError("FE: Something went wrong with fetching weather data");
                     }
                 }, () => {
@@ -33,7 +33,6 @@ export default function WeatherPanel() {
         }
     }, []);
 
-    const todayIcon = weather ? getWeatherIcon(weather.forecast[0].icon) : "";
     const todayClassName = weather ? getWeatherClassName(weather.forecast[0].icon) : "";
     return (
         <>
@@ -41,51 +40,13 @@ export default function WeatherPanel() {
             <div className={styles.WeatherPanel + " " + styles[todayClassName]}>
                 {weather ? (
                     <div>
-                        <div className={styles.Header}>
-                            <h1>{weather.city || "N/A"}</h1>
-                            <ListIcon/>
-                        </div>
-                        <div className={styles.MainInfo}>
-                            <div className={styles.Info}>
-                                <h3>{Math.round(weather.forecast[0]?.temp) ?? "N/A"}°C</h3>
-                                <p>{weather.forecast[0]?.description || "No data"}</p>
-                            </div>
-                        <div className={styles.Image}>
-                            <div id={'today-icon'} dangerouslySetInnerHTML={{__html: todayIcon}}/>
-                        </div>
-                       </div>
-                        <div className={styles.Stats}>
-                            <div>
-                                <WindIcon/>
-                                <p>{Math.round(weather.forecast[0].wind)} km/h</p>
-                            </div>
-                            <div>
-                                <HumidityIcon/>
-                                <p>{weather.forecast[0].humidity}%</p>
-                            </div>
-                            <div>
-                                <VisibilityIcon/>
-                                <p>{weather.forecast[0].visibility / 1000} km</p>
-                            </div>
-                        </div>
-                        <div className={styles.NextDays}>
-                            <h2>Next 3 Days</h2>
-                            {weather.forecast.slice(1, 4).map((day, index) => (
-                                <div key={index}>
-                                    <p>{new Date(day.dt * 1000).toLocaleDateString("en-EN", { weekday: "long" })}</p>
-                                    <div
-                                        className={'NextDaysIcon'}
-                                        id={`day-${index}`}
-                                        dangerouslySetInnerHTML={{ __html: getWeatherIcon(day.icon) }
-                                    }
-                                    />
-                                    <p className={styles.MiniTemp}>{Math.round(day.temp)?? "N/A"}°C</p>
-                                </div>
-                            ))}
-                        </div>
+                        <Header weather={weather}/>
+                        <MainInfo weather={weather}/>
+                        <TodayStats weather={weather}/>
+                        <NextDays weather={weather}/>
                     </div>
                 ) : <p>Loading...</p>}
             </div>
         </>
-    )
+    );
 }
