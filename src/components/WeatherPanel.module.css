@@ -1,70 +1,81 @@
 .clearSkyDay {
-    background-image: linear-gradient(120deg, #87CEEB, #FFF8E7);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #87CEEB, #FFF8E7, #FFD700);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
 }
 
 .clearSkyNight {
     background-image: linear-gradient(140deg, #191970, #131b46, #361293, #4B0082);
-    background-size: 150% 150% ;
+    background-size: 150% 150%;
     animation: gradient-animation 8s ease infinite;
 }
 
 .stormDay {
-    background-image: linear-gradient(120deg, #191970, #4B0082);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #4B0082, #2c065d, #191970);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
 }
 
 .stormNight {
-    background-image: linear-gradient(120deg, #191970, #8B0000);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #1d1d42, #524b57, #110505);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
 }
 
 .rainDay {
-    background-image: linear-gradient(120deg, #A9A9A9, #32CD32);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #708090, #A9A9A9, #32CD32);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
 }
 
 .rainNight {
-    background-image: linear-gradient(120deg, #2F4F4F, #228B22);
-    animation: gradient-animation 10s ease infinite;
-}
-
-.cloudsNight {
-    background-image: linear-gradient(140deg, #2e2e3c, #55565b, #394057, #111522);
+    background-image: linear-gradient(140deg, #2F4F4F, #1b2d2d, #228B22);
+    background-size: 150% 150%;
     animation: gradient-animation 8s ease infinite;
 }
 
 .cloudsDay {
-    background-image: linear-gradient(120deg, #7a8183, #d3d3d3);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #7a8183, #d3d3d3, #ffffff);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
     color: #2F4F4F;
+}
+
+.cloudsNight {
+    background-image: linear-gradient(140deg, #2e2e3c, #55565b, #394057, #111522);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
 }
 
 .cloudsNight .Stats, .cloudsNight .NextDays p {
     color: #fff;
 }
 
-.snowNight {
-    background-image: linear-gradient(120deg, #b6b5b5, #cbe0e0);
-    animation: gradient-animation 10s ease infinite;
-    color: #000000;
-}
-
 .snowDay {
-    background-image: linear-gradient(120deg, #FFFFFF, #e5eff8);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #FFFFFF, #e5eff8, #c9e1f4);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
     color: #2F4F4F;
 }
 
+.snowNight {
+    background-image: linear-gradient(140deg, #b6b5b5, #cbe0e0, #e0f7fa);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
+    color: #000000;
+}
+
 .fogDay {
-    background-image: linear-gradient(120deg, #D3D3D3, #90EE90);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #D3D3D3, #90EE90, #b0c4de);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
     color: #2F4F4F;
 }
 
 .fogNight {
-    background-image: linear-gradient(120deg, #2F4F4F, #176417);
-    animation: gradient-animation 10s ease infinite;
+    background-image: linear-gradient(140deg, #2F4F4F, #176417, #1b3329);
+    background-size: 150% 150%;
+    animation: gradient-animation 8s ease infinite;
     color: #000000;
 }
 
@@ -222,4 +233,28 @@
     text-align: left;
     font-size: 18px;
     font-weight: 700;
+}
+
+/***************************/
+/*SECTION - MINIPANEL*/
+/***************************/
+
+.MiniPanel {
+    margin: 100px;
+    border-radius: 16px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #5d5d5d;
+}
+.MiniPanel .Image svg{
+    padding: 0;
+    margin-top: 20px;
+    width: 150px;
+    height: 100%;
+}
+.MiniPanel h1{
+    top: -30px;
+    margin: auto;
+    font-size: 30px;
+    width: 70%;
 }
