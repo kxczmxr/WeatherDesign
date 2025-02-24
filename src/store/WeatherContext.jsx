@@ -16,7 +16,6 @@ export const useWeather = () => {
                         const response = await fetch(`http://localhost:8888/api/weather?lat=${latitude}&lon=${longitude}`);
                         const data = await response.json();
                         setWeather(data);
-                        console.log(data);
                     } catch (error) {
                         console.error(error);
                         setError('Something went wrong with fetching weather data');

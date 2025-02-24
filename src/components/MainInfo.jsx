@@ -10,7 +10,8 @@ export default function MainInfo({weather}) {
                 <p>{weather.forecast[0]?.description || "No data"}</p>
             </div>
             <div className={styles.Image}>
-                <div id={'today-icon'} dangerouslySetInnerHTML={{__html: todayIcon}}/>
+                {/*<div id={'today-icon'} dangerouslySetInnerHTML={{__html: todayIcon}}/>*/}
+                {todayIcon}
             </div>
         </div>
     )
