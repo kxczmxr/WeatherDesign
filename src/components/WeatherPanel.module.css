@@ -29,7 +29,7 @@
 }
 
 .cloudsNight {
-    background-image:linear-gradient(140deg, #2e2e3c, #55565b, #394057, #111522);
+    background-image: linear-gradient(140deg, #2e2e3c, #55565b, #394057, #111522);
     animation: gradient-animation 8s ease infinite;
 }
 
@@ -38,7 +38,8 @@
     animation: gradient-animation 10s ease infinite;
     color: #2F4F4F;
 }
-.cloudsNight .Stats, .cloudsNight .NextDays p{
+
+.cloudsNight .Stats, .cloudsNight .NextDays p {
     color: #fff;
 }
 
@@ -66,109 +67,123 @@
     color: #000000;
 }
 
-.WeatherPanel{
+.WeatherPanel {
     border-radius: 16px;
     border: 1px solid #5d5d5d;
 }
 
 @keyframes gradient-animation {
-    0% {background-position: 0 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0 50%;}
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
-.Header{
+.Header {
     display: flex;
     align-items: center;
     width: 100%;
     font-size: 11px;
 }
 
-.Header h1{
-    margin-top:3.5rem;
+.Header h1 {
+    margin: 3.5rem 2rem;
     flex: 1;
     text-align: center;
 }
 
-.Header svg{
- margin: 0 30px 30px 0;
+.Header svg {
+    margin: 0 30px 30px 0;
+    cursor: pointer;
+}
+.Header svg:hover {
+    stroke: rgb(51, 51, 51);
 }
 /***************************/
 /*SECTION - MAININFO
 /***************************/
-.MainInfo{
+.MainInfo {
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
     width: 85%;
     height: 10rem;
 }
+
 /***************************/
-/*SECTION - IMG ICON
+/*SECTION - IMG ICON`
 /***************************/
-.Image{
+.Image {
     margin: 10px 110px 0 auto;
     max-height: 100px;
     max-width: 100px;
 }
 
-.Image svg{
+.Image svg {
     width: 250%;
     height: 250%;
 }
+
 /***************************/
 /*SECTION - INFO - temp & desc*/
 /***************************/
-.Info{
+.Info {
     padding-top: 30px;
 }
 
-.Info h3{
+.Info h3 {
     margin: 0;
     font-size: 40px;
     line-height: 2.5rem;
 }
 
-.Info p{
+.Info p {
     text-align: left;
     padding-bottom: 10px;
     margin: 0;
     font-size: 20px;
 }
+
 /***************************/
 /*SECTION - STATS*/
 /***************************/
-.Stats{
+.Stats {
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
 }
 
-.Stats div{
+.Stats div {
     background-color: rgba(217, 217, 217, 0.5);
     box-shadow: rgba(0, 0, 0, 0.25) 1px 10px 4px 0;
     width: 25%;
     border-radius: 16px;
 }
 
-.Stats svg{
+.Stats svg {
     padding-top: 5px;
 }
 
-.Stats p{
+.Stats p {
     margin-top: 8px;
 }
+
 /***************************/
 /*SECTION - NEXT 3 DAYS*/
 /***************************/
-.NextDays{
+.NextDays {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 45px;
 }
 
-.NextDays > div:not(.NextDaysIcon){
+.NextDays > div:not(.NextDaysIcon) {
     background-color: rgba(217, 217, 217, 0.5);
     box-shadow: rgba(0, 0, 0, 0.25) 1px 10px 4px 0;
     border-radius: 16px;
@@ -179,15 +194,15 @@
     margin: 10px 0;
 }
 
-.NextDaysIcon{
+.NextDaysIcon {
 
 }
 
-.NextDays h2{
+.NextDays h2 {
     margin: 0;
 }
 
-.NextDays p{
+.NextDays p {
     font-size: 18px;
     font-weight: 700;
 }
